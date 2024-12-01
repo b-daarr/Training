@@ -1,4 +1,4 @@
-﻿namespace C01
+﻿namespace G01
 {
     internal class Program
     {
