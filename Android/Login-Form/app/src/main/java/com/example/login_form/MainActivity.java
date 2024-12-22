@@ -30,8 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onButtonClick(View view) {
         Button Log = findViewById(R.id.log_try);
-        EditText Username = findViewById(R.id.user_nick);
-        EditText Password = findViewById(R.id.Pass);
+        EditText Name = findViewById(R.id.textName);
+        EditText Phone = findViewById(R.id.textPhone);
+        EditText Email = findViewById(R.id.textEmail);
+        EditText Password = findViewById(R.id.textPassword);
+        EditText Age = findViewById(R.id.textAge);
         Log.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
                     Runnable R = new Runnable() {
 
                         public void run() {
-                            if (Username.getText().toString().equals("main") && Password.getText().toString().equals("123"))
+                            if (Name.getText().toString().equals("Jason Mike") && Phone.getText().toString().equals("9876543210") && Email.getText().toString().equals("test@mail.com") && Password.getText().toString().equals("Ab123+") && Age.getText().toString().equals("1399/02/01"))
                             {
-                                Intent I = new Intent(MainActivity.this, Calculator.class);
-                                MainActivity.this.startActivity(I);
+                                // Intent I = new Intent(MainActivity.this, Calculator.class);
+                                // MainActivity.this.startActivity(I);
                                 Toast.makeText(MainActivity.this, "Welcome", Toast.LENGTH_SHORT).show();
                             }
                             else {
