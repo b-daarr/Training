@@ -3,10 +3,6 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -30,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         Runnable main_runnable = new Runnable() {
             @Override
             public void run() {
-                Intent main_intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent main_intent = new Intent(MainActivity.this.peekAvailableContext(), LoginActivity.class);
                 MainActivity.this.startActivity(main_intent);
                 finish();
             }

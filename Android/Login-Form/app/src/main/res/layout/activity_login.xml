@@ -6,20 +6,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#FFFDD0"
-        tools:context=".MainActivity">
+        tools:context=".LoginActivity">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:gravity="top|center"
             android:foregroundGravity="center"
             android:orientation="vertical"
             tools:ignore="ExtraText,MissingConstraints,UselessLeaf">
 
         <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
+                android:layout_marginTop="20dp"
                 android:orientation="vertical"
                 tools:ignore="ExtraText,MissingConstraints,UselessParent">
 
@@ -34,13 +34,79 @@
                     tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
                     tools:srcCompat="@tools:sample/avatars"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/textInputs"
+            <EditText
+                    android:id="@+id/user_name"
                     android:layout_width="match_parent"
-                    android:layout_gravity="center"
-                    android:foregroundGravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:importantForAutofill="no"
+                    android:hint="Username: sample@mail.com"
+                    android:inputType="textEmailAddress"
+                    android:textSize="20dp"
+                    tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
+
+            <EditText
+                    android:id="@+id/user_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:importantForAutofill="no"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textSize="20dp"
+                    tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/reset_captcha"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="new"
+                        android:textSize="20dp"
+                        tools:ignore="HardcodedText,SpUsage"/>
+
+                <TextView
+                        android:id="@+id/captcha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:importantForAutofill="no"
+                        android:textSize="40dp"
+                        android:textAlignment="center"
+                        tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
+
+            </LinearLayout>
+
+            <EditText
+                    android:id="@+id/entry_captcha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:importantForAutofill="no"
                     android:textAlignment="center"
-                    android:layout_height="match_parent"/>
+                    android:hint="CAPTCHA"
+                    android:inputType="text"
+                    android:textSize="20dp"
+                    tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
+
+            <Button
+                    android:id="@+id/sign_try"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Sign in"
+                    tools:ignore="HardcodedText,SpUsage"/>
+
+            <Button
+                    android:id="@+id/change_signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Register"
+                    tools:ignore="HardcodedText,SpUsage"/>
 
         </LinearLayout>
     </LinearLayout>

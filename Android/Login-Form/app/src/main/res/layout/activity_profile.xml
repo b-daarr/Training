@@ -1,86 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFDD0"
-    tools:context=".Profile">
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ProfileActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-
-        tools:ignore="ExtraText,MissingConstraints">
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="vertical"
-            tools:ignore="ExtraText,MissingConstraints">
+            android:layout_gravity="top|center"
+            tools:ignore="MissingConstraints,UselessLeaf">
 
-            <ImageView
+        <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="top|center"
                 android:layout_margin="50sp"
+                android:src="@drawable/user"
                 android:background="@drawable/user"
                 tools:ignore="ContentDescription,MissingConstraints,ImageContrastCheck"
-                tools:srcCompat="@tools:sample/avatars" />
+                tools:srcCompat="@tools:sample/avatars"/>
 
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="bottom"
-            tools:ignore="MissingConstraints,UselessLeaf">
-
-            <TextView
+        <TextView
                 android:id="@+id/user_name"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="left|center"
-                android:text="  Username: "
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
 
-            <TextView
+        <TextView
                 android:id="@+id/user_password"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="left|center"
-                android:text="  Password: "
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-
-            <TextView
-                android:id="@+id/user_age"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:gravity="left|center"
-                android:text="  Age: "
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                tools:ignore="HardcodedText,RtlHardcoded" />
-
-        </LinearLayout>
-        <Button
-            android:id="@+id/log_try"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:text="Modify"
-            android:textSize="20dp"
-            android:clickable="true"
-            tools:ignore="HardcodedText,OnClick,RtlHardcoded,SpUsage" />
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textSize="30dp"
+                tools:ignore="HardcodedText,LabelFor,SpUsage,TextFields"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
